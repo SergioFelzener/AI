@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var rs = require("readline-sync");
+var n1 = rs.question('Entre sua nota: ');
+var n2 = rs.question('Entre sua nota: ');
+var n3 = rs.question('Entre sua nota: ');
+var media1 = n1 * 2;
+var media2 = n2 * 3;
+var media3 = n3 * 5;
+var ponderada = 10;
+var result = (media1 + media2 + media3) / (ponderada);
+console.log(result);
