@@ -12,5 +12,5 @@ function TipoDeNumero(num : number) : string {
 
 const num1 = Number(rs.question('digite um numero: '))
 
-console.log('O numero é : ' + TipoDeNumero(num1));
+console.log('O numero é : ' + num1 + ' : ' + TipoDeNumero(num1));
 

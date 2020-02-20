@@ -7,7 +7,7 @@ let oper: string = rs.question('qual operação deseja fazer : somar / subtrair 
 
 
 if (oper === "somar") {
-    const resultado = (num1 + num2);
+    const resultado = num1 + num2;
     console.log("soma é : " + resultado);
 } else if (oper === "subtrair") {
     const resultado = (num1 + num2);
