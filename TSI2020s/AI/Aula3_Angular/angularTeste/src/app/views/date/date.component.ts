@@ -17,4 +17,8 @@ export class DateComponent implements OnInit {
     this.dataAtual = new Date();
   }
 
+  DizerOi(){
+    alert('Olá');
+  }
+
 }

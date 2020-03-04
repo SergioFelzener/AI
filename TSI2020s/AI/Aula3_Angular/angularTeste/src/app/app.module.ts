@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DateComponent } from './views/date/date.component';
 import { MsgComponent } from './views/msg/msg.component';
+import { SomaComponent } from './views/soma/soma.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DateComponent,
-    MsgComponent
+    MsgComponent,
+    SomaComponent
   ],
   imports: [
     BrowserModule,
