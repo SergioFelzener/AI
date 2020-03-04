@@ -10,7 +10,7 @@ let ArrayInvertido: Array<number> = new Array;
 function inverteArray(): void {
 
     for (let i = 0; i < 3; i++) {
-        let numeroDigitado = Number(rs.question('Digite um numero'));
+        let numeroDigitado = Number(rs.question('Digite um numero : '));
         ArrayUser.push(numeroDigitado);
     }
     ArrayInvertido = ArrayUser.slice(0).reverse();

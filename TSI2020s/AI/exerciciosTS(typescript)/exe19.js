@@ -8,7 +8,7 @@ var ArrayUser = new Array;
 var ArrayInvertido = new Array;
 function inverteArray() {
     for (var i = 0; i < 3; i++) {
-        var numeroDigitado = Number(rs.question('Digite um numero'));
+        var numeroDigitado = Number(rs.question('Digite um numero : '));
         ArrayUser.push(numeroDigitado);
     }
     ArrayInvertido = ArrayUser.slice(0).reverse();
