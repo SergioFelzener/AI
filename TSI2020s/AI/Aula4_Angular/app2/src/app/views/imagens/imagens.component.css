@@ -1,0 +1,25 @@
+div {
+    display:flex;
+    width: auto;
+    height: 200px;
+}
+.mudacss1 {
+    border: 5px double #1C6EA4;
+    height: 200px;
+    margin-right: 5px;
+}
+
+.mudacss2 {
+    border: 5px double #1C6EA4;
+    height: 200px;
+    margin-right: 5px;
+
+}
+
+.mudacss3 {
+
+    border: 5px double #1C6EA4;
+    height: 200px;
+    
+
+}
