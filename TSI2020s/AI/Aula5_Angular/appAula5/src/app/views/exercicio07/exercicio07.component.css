@@ -1,0 +1,17 @@
+div {
+  widows: 200px;
+  height: 200px;
+  font-size: 36px;
+  border: 2px solid black;
+  float: left;
+
+}
+
+.divInvisivel {
+  display: none;
+
+}
+
+.divVisivel {
+  display: block;
+}
