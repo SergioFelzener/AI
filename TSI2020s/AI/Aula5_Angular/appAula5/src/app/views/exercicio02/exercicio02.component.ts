@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Exercicio02Component implements OnInit {
 
+  varCorona = 'corona'
+
   constructor() { }
 
   ngOnInit(): void {

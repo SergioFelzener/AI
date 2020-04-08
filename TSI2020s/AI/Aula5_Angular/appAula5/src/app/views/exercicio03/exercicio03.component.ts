@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class Exercicio03Component implements OnInit {
 
   styleClass = 'petroleo';
+  styleClass2 = 'petroleo2';
+  varPetrobras = 'petrobras'
 
   constructor() { }
 

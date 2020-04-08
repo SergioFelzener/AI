@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Exercicio05Component implements OnInit {
 
+  class1 = 'class1';
   imagem = "assets/house-loop.jpg";
   ativo = true;
 
@@ -17,10 +18,13 @@ export class Exercicio05Component implements OnInit {
 
   trocarImagem(): void {
     if(this.ativo) {
+
       this.imagem = 'assets/house-loop.jpg';
 
     }else {
+
       this.imagem = 'assets/house-loop2.jpg';
+
     }
     this.ativo = !this.ativo
   }

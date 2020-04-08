@@ -3,7 +3,7 @@ div {
   height: 200px;
   font-size: 36px;
   border: 2px solid black;
-  float: left;
+  text-align: center;
 
 }
 

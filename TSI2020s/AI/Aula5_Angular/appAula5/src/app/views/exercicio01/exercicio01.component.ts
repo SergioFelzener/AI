@@ -10,6 +10,9 @@ export class Exercicio01Component implements OnInit {
   nome ='sergio'
   sobrenome = 'Soap'
 
+  nome2 = 'teste2'
+  sobrenome2 = 'teste sobrenome 2'
+
   constructor() { }
 
   ngOnInit(): void {

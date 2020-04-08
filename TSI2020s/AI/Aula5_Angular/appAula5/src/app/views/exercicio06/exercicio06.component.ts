@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class Exercicio06Component implements OnInit {
 
 name = '';
+varFoto1 = 'foto1';
+varFoto2 = 'foto2';
+varFoto3 = 'foto3';
+
 
   constructor() { }
 

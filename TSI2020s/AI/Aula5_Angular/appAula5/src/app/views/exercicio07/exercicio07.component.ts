@@ -31,8 +31,8 @@ export class Exercicio07Component implements OnInit {
       this.classdiv3 = 'divVisivel';
     } else {
       this.divAtual = 'div1';
-      this.classdiv1 = 'divInvisivel';
-      this.classdiv2 = 'divVisivel';
+      this.classdiv1 = 'divVisivel';
+      this.classdiv2 = 'divInvisivel';
       this.classdiv3 = 'divInvisivel';
 
     }

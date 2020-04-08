@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,8 @@ import { Exercicio04Component } from './views/exercicio04/exercicio04.component'
 import { Exercicio05Component } from './views/exercicio05/exercicio05.component';
 import { Exercicio06Component } from './views/exercicio06/exercicio06.component';
 import { Exercicio07Component } from './views/exercicio07/exercicio07.component';
+import { TwowayComponent } from './views/twoway/twoway.component';
+import { BindingTwoWayComponent } from './views/binding-two-way/binding-two-way.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,14 @@ import { Exercicio07Component } from './views/exercicio07/exercicio07.component'
     Exercicio04Component,
     Exercicio05Component,
     Exercicio06Component,
-    Exercicio07Component
+    Exercicio07Component,
+    TwowayComponent,
+    BindingTwoWayComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
