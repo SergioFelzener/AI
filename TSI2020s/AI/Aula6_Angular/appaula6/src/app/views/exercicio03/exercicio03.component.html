@@ -1,0 +1,19 @@
+<h2>Exercício 03 Aula 06</h2>
+
+<br>
+<label for="nome">Digite seu nome: </label>
+<input id="nome" type="text" [(ngModel)]="nome">
+<br><br>
+
+<label for="curso">Escolha seu Curso:</label>
+<select id="curso" [(ngModel)]="curso">cusro
+    <option value="TSI">Sistemas para Internet</option>
+    <option value="CIE">Ciência da Computação</option>
+    <option value="MOD">Moda</option>
+    <option value="GAST">Gastronomia</option>
+    <option value="ADM">Administração</option>
+</select>
+<br>
+
+<p>{{nome}} - {{obterCurso(curso)}}</p>
+<hr>

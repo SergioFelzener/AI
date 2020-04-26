@@ -1,0 +1,19 @@
+<h2>Desafio Radio Calculadora</h2>
+<p>Criar 3 caixas de textos radios, contendo as operações basicas, mostrar resultado na 3 caixa de texto</p>
+
+<span>Calculadora</span><br>
+<input type="number" [(ngModel)]="valor1" (ngModelChange)="calculadora()">
+<input type="number" [(ngModel)]="valor2" (ngModelChange)="calculadora()">
+
+<p>
+    <input type="radio" value="+" id="soma" [(ngModel)]="operacao" (ngModelChange)="calculadora()">
+    <label for="soma">Somar</label>
+    <input style="margin-left: 10px;" type="radio" value="-" id="subtracao" [(ngModel)]="operacao" (ngModelChange)="calculadora()">
+    <label for="subtracao">Subtrair</label><br>
+    <input type="radio" value="/" id="divisao" [(ngModel)]="operacao" (ngModelChange)="calculadora()">
+    <label for="divisao">Dividir</label>
+    <input style="margin-left: 10px;" type="radio" value="*" id="multiplicacao" [(ngModel)]="operacao" (ngModelChange)="calculadora()">
+    <label for="multiplicacao">Multiplicar</label>
+</p><br>
+<label for="total">Resultado:</label>
+<input id="total" type="number" [value]="total">

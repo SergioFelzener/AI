@@ -1,11 +1,12 @@
 <h2>Exercício 01</h2>
 <!--tem que usar type number !! se trocar para text concatena-->
+<p>Soma de 2 valores</p>
 <input type="number" [(ngModel)]="valor1"><br>
 <input type="number" [(ngModel)]="valor2">
 
 
 
 <p>
-  {{ valor1 + valor2 }}
-  {{ soma(valor1, valor2) }}
+    Resultado: {{ valor1 + valor2 }}<br> Resultado em função: {{ soma(valor1, valor2) }}
 </p>
+<hr>
