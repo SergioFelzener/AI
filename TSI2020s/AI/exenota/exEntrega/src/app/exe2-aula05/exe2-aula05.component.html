@@ -1,0 +1,9 @@
+<h2 [class]="title">Aula 5 Exercicio 02 (para entregar)</h2>
+<p>2 - Criar uma caixa de texto onde o usuario digitara uma raca de cachorro, e em seguida a imagem da raca aparecera abaixo, faca para no minimo 3 racas</p>
+<br>
+
+<label for="raca">Digite : dog1 / dog2 ou dog3</label><br>
+
+<input id="raca" type="text" [(ngModel)]="raca"><br>
+<img [class]="racacss" style="margin-top: 10px;" src="assets/img/{{ raca }}.jpeg">
+<hr>

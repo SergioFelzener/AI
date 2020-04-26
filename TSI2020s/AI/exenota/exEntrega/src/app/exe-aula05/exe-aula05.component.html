@@ -1,0 +1,17 @@
+<h2 class="{{titulo}}">Aula 5 Exercicio 01 (para entregar)</h2>
+<p>1 - Criar 2 caixas de texto, ao digitar valores nos Inputs aparecer a soma automatipa num elemento "p" abaixo das mesmas</p>
+
+<hr>
+
+<label for="valor1">Valor 1</label>
+<input style=" margin-left: 10px;" id="valor1" type="number" [(ngModel)]="valor1">
+<label style=" margin-left: 10px;" for="valor2">Valor 2</label>
+<input id="valor2" style=" margin-left: 10px;" type="number" [(ngModel)]="valor2">
+<br>
+<br>
+
+<p> Soma = {{valor1 + valor2}}</p>
+
+<p> Soma = {{soma(valor1,valor2)}}</p>
+
+<hr>

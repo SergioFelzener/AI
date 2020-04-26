@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "appaula6": {
+    "exEntrega": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/appaula6",
+            "outputPath": "dist/exEntrega",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "appaula6:build"
+            "browserTarget": "exEntrega:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "appaula6:build:production"
+              "browserTarget": "exEntrega:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "appaula6:build"
+            "browserTarget": "exEntrega:build"
           }
         },
         "test": {
@@ -110,19 +110,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "appaula6:serve"
+            "devServerTarget": "exEntrega:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "appaula6:serve:production"
+              "devServerTarget": "exEntrega:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "appaula6",
+  "defaultProject": "exEntrega",
   "cli": {
-    "analytics": "fdd0bbbb-b8f4-47e3-aa2f-9e83306f0b1d"
+    "analytics": "67505831-15c5-4373-839b-2eacaab56d82"
   }
 }
