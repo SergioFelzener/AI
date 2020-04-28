@@ -1,0 +1,34 @@
+<h2>Exercício 04 ngIf</h2>
+
+<p>4 - Crie uma calculadora com as operações, usando ngIf </p>
+
+<input type="number" [(ngModel)]="num1">
+<br>
+<input type="number" [(ngModel)]="num2">
+<br>
+<div *ngIf="num1 != null || num1 !=undefined">
+    <button (click)="somar();">+</button>
+    <button (click)="subtrair();">-</button>
+    <button (click)="multiplicar();">*</button>
+    <button (click)="dividir();">/</button>
+</div>
+
+<input type="number" [(ngModel)]="resultado" *ngIf="resultado != null">
+<br><br>
+<hr>
+<p>4-b) Usando um método (função)</p>
+
+<input type="number" [(ngModel)]="num3">
+<br>
+<input type="number" [(ngModel)]="num4">
+<br>
+<div *ngIf="num3 || num4">
+    <button (click)="calcular('somar');">+</button>
+    <button (click)="calcular('subtrair');">-</button>
+    <button (click)="calcular('multiplicar');">*</button>
+    <button (click)="calcular('dividir');">/</button>
+</div>
+
+<input type="number" [(ngModel)]="resultado2" *ngIf="resultado2 != null">
+<br><br>
+<hr>

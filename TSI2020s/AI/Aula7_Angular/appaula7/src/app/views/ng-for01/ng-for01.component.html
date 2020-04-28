@@ -1,0 +1,9 @@
+<h2>Exercício 01 - ngFor</h2>
+<p>1 - Crie um vetor (array) de nomes de imagens exibindo cada imagem de forma sequencial e a imagem exibe seu nome num alerta</p>
+
+
+<div>
+    <img [class]="imagemcss" *ngFor="let imagem of imagens" src="assets/img/{{imagem}}" (click)="alerta(imagem)">
+</div>
+<br>
+<hr>

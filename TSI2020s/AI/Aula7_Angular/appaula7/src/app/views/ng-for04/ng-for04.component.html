@@ -1,0 +1,17 @@
+<h2>Exercício 04 ngFor</h2>
+
+<p>4 - Crie um array de nomes vazio, junto a uma caixa de texto e um botao</p>
+<p>ao clicar no botao, o nome deve ser adicionado no array de nomes e aparecer numa lista ol</p>
+
+<input [(ngModel)]="nomeLista" type="text" placeholder="Lista">
+<button (click)="adicionarNome()">Adicionar</button>
+
+<div>
+    <h4>Adicionado ao Array (nomes)</h4>
+    <ol *ngIf="nomes.length > 0">
+        <li *ngFor="let nome of nomes">{{ nome }}</li>
+    </ol>
+</div>
+
+<br>
+<hr>

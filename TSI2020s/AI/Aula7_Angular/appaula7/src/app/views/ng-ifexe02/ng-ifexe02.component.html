@@ -1,0 +1,12 @@
+<h2>Exercício 02 ngIf</h2>
+<p>2 - Modifique o exercício anterior para que sejam mostrados se é positivo ou negativo ou Zero.</p>
+
+<input type="number" [(ngModel)]="numero">
+
+<p style="color: green;" *ngIf="numero > 0">{{numero}} é Positivo !</p>
+
+<p style="color: red;" *ngIf="numero < 0">{{numero}} é Negativo !</p>
+
+<p style="color: blue;" *ngIf="numero == 0">{{numero}} Numero "0" !</p>
+
+<hr>

@@ -1,0 +1,12 @@
+<h2>Exercício ngFor 02</h2>
+
+<p>2 - Criar um array contendo 4 paises, mostrar em lista e quando o pais for clicado mostrar a capital.</p>
+
+<ol>
+    <li *ngFor="let pais of paises; let i = index" (click)="capital(i)">
+        {{pais}}
+    </li>
+</ol>
+
+<br>
+<hr>
