@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "appaula8": {
+    "game": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/appaula8",
+            "outputPath": "dist/game",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "appaula8:build"
+            "browserTarget": "game:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "appaula8:build:production"
+              "browserTarget": "game:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "appaula8:build"
+            "browserTarget": "game:build"
           }
         },
         "test": {
@@ -110,18 +110,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "appaula8:serve"
+            "devServerTarget": "game:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "appaula8:serve:production"
+              "devServerTarget": "game:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "appaula8",
+  "defaultProject": "game",
   "cli": {
     "analytics": false
   }
