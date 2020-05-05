@@ -1,0 +1,26 @@
+<h2>Exercício 01 Ng SWITCH</h2>
+
+<h3>Canais Disponíveis para Pesquisa : </h3>
+
+<ul>
+    <li *ngFor='let canal of canais'>{{ canal }}</li>
+</ul>
+
+<input type="text" [(ngModel)]="canal">
+
+<div [ngSwitch]='canal'>
+    <p *ngSwitchCase="'Porta dos Fundos'">Porta dos Fundos<br>
+        <a target="_blank" href="https://www.youtube.com/user/portadosfundos">Acesse o Site Aqui !</a>
+    </p>
+    <p *ngSwitchCase="'Thug Life'">Thug life<br>
+        <a target="_blank" href="https://www.youtube.com/channel/UCinzLe_IpcyhTU3WLcpcFpw">Acesse o Site Aqui !</a>
+    </p>
+    <p *ngSwitchCase="'Cartoon Network'">Cartoon NetWork<br>
+        <a target="_blank" href="https://www.youtube.com/user/BRCartoonNetwork">Acesse o Site Aqui !</a>
+    </p>
+    <p *ngSwitchCase="'X-Games'">X-Games<br>
+        <a target="_blank" href="https://www.youtube.com/user/XGames">Acesse o Site Aqui !</a>
+    </p>
+    <p *ngSwitchDefault>Digite um canal válido</p>
+</div>
+<hr>
