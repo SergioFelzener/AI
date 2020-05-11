@@ -9,11 +9,11 @@
     }
 </style>
 
-<div class="container">
+<div class="container mb-5">
     <h2>Meus Jogos</h2>
     <div *ngIf="selGame ">
-        <input class="mr-2 " type="text " placeholder="Game Name " [(ngModel)]="selGame.name ">
-        <input type="text " placeholder="Status " [(ngModel)]="selGame.status ">
+        <input class="form-control mr-2 " type="text " placeholder="Game Name " [(ngModel)]="selGame.name ">
+        <input class="form-control mt-3" type="text " placeholder="Status " [(ngModel)]="selGame.status ">
         <br>
         <div>
             <label style="margin-top: 10px; " for="categoria ">Genero:</label>
@@ -22,7 +22,7 @@
           {{ genre.name }}</option>
       </select>
         </div>
-        <input type="text " style="margin-top: 10px; " placeholder="Plataforma " [(ngModel)]="selGame.plataform ">
+        <input class="form-control" type="text " style="margin-top: 10px; " placeholder="Plataforma " [(ngModel)]="selGame.plataform ">
         <br>
         <br>
         <button class="btn-sm btn-success mr-2 " (click)="save(); ">Save</button>
@@ -34,13 +34,13 @@
 
     <div class="row">
         <div *ngFor=" let game of games " (click)="selectGame(game)" class='col-md-3' style="padding-top: 1%;">
-            <div class="card " style="width: 60%;">
+            <div class="card " style="width: 100%;">
                 <div class="card-body ">
-                    <h2 class="card-title ">{{game.name}}</h2>
-                    <p class="card-text ">{{game.status}}</p>
-                    <p class="card-text ">{{game.plataform}}</p>
-                    <p class="card-text ">{{game.genre}}</p>
-                    <button class="btn-sm btn-danger float-right mb-1" (click)="remove(game.id); ">X</button>
+                    <h2 class="card-title">{{game.name}}</h2>
+                    <p class="card-text ">Status: {{game.status}}</p>
+                    <p class="card-text ">Plataforma: {{game.plataform}}</p>
+                    <p class="card-text ">Gênero: {{game.genre}}</p>
+                    <span class="float-right">deletar<button class="btn-sm btn-danger float-right mb-1 ml-1" (click)="remove(game.id);">X</button></span>
                 </div>
             </div>
         </div>
