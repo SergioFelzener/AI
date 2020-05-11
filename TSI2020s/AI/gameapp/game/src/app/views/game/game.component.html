@@ -1,23 +1,49 @@
-<h2>Meus Jogos</h2>
-<ul>
-    <li *ngFor="let game of games" (click)="selectGame(game)">
-        {{game.name}} - {{game.status}}
-        <button class="btn-sm btn-danger" (click)="remove(game.id);">X</button>
-    </li>
-</ul>
+<style>
+    .card {
+        border-radius: 20px;
+        background: white;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+        transition: 0.5s ease;
+        cursor: pointer;
+        margin: 30px;
+    }
+</style>
 
-<div *ngIf="selGame">
-    <input class="mr-2" type="text" placeholder="Game Name" [(ngModel)]="selGame.name">
-    <input type="text" placeholder="Status" [(ngModel)]="selGame.status">
+<div class="container">
+    <h2>Meus Jogos</h2>
+    <div *ngIf="selGame ">
+        <input class="mr-2 " type="text " placeholder="Game Name " [(ngModel)]="selGame.name ">
+        <input type="text " placeholder="Status " [(ngModel)]="selGame.status ">
+        <br>
+        <div>
+            <label style="margin-top: 10px; " for="categoria ">Genero:</label>
+            <select id="categoria " style="width: 120px; margin-left: 10px; " class="form-control " [(ngModel)]="selGame.genre ">
+        <option ([ngModel])="(genres) " *ngFor="let genre of genres ">
+          {{ genre.name }}</option>
+      </select>
+        </div>
+        <input type="text " style="margin-top: 10px; " placeholder="Plataforma " [(ngModel)]="selGame.plataform ">
+        <br>
+        <br>
+        <button class="btn-sm btn-success mr-2 " (click)="save(); ">Save</button>
+        <button class="btn-sm btn-danger " (click)="cancel(); ">Cancel</button>
+    </div>
     <br>
-    <input class="mr-2" type="text" placeholder="Genero" [(ngModel)]="selGame.genre">
-    <input type="text" placeholder="Plataforma" [(ngModel)]="selGame.plataform">
+    <button class="btn-sm btn-primary " (click)="newGame(); ">New Game</button>
     <br>
-    <br>
-    <button class="btn-sm btn-success mr-2" (click)="save();">Save</button>
-    <button class="btn-sm btn-danger" (click)="cancel();">Cancel</button>
+
+    <div class="row">
+        <div *ngFor=" let game of games " (click)="selectGame(game)" class='col-md-3' style="padding-top: 1%;">
+            <div class="card " style="width: 60%;">
+                <div class="card-body ">
+                    <h2 class="card-title ">{{game.name}}</h2>
+                    <p class="card-text ">{{game.status}}</p>
+                    <p class="card-text ">{{game.plataform}}</p>
+                    <p class="card-text ">{{game.genre}}</p>
+                    <button class="btn-sm btn-danger float-right mb-1" (click)="remove(game.id); ">X</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
-<br>
-<button class="btn-sm btn-primary" (click)="newGame();">New Game</button>
-<br>
-<hr>

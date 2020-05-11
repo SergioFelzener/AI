@@ -1,56 +1,60 @@
 import { Component, OnInit } from '@angular/core';
-import { Genre } from 'src/app/model/genre';
-import { GenreService } from 'src/app/services/genre.service';
+import { Genre } from '../../model/genre';
+import { GenreService } from '../../services/genre.service';
 
 @Component({
   selector: 'app-genre',
   templateUrl: './genre.component.html',
-  styleUrls: ['./genre.component.css']
+  styleUrls: ['./genre.component.scss']
 })
 export class GenreComponent implements OnInit {
-
   genres = new Array<Genre>();
-  selGenre: Genre = null;
+  selectedGenre: Genre = null;
   editMode = false;
 
   constructor(private genreService: GenreService) { }
 
   ngOnInit(): void {
+    this.refreshGenres();
   }
 
-  refreshGenres(){
+  refreshGenres() {
     this.genres = this.genreService.list();
   }
 
-  selectGenre(genre: Genre){
-    this.selGenre = genre;
+  selectGenre(genre: Genre) {
+    this.selectedGenre = genre;
     this.editMode = true;
   }
 
-  newGenre(){
-    this.editMode = false;
-    this.selGenre = new Genre();
-  }
-
-  save(){
-    if(this.editMode) {
-      this.genreService.update(this.selGenre);
-    }else {
-      this.genreService.insert(this.selGenre);
+  save() {
+    if (this.editMode) {
+      this.genreService.update(this.selectedGenre);
+    } else {
+      this.genreService.insert(this.selectedGenre);
     }
+
     this.cancel();
     this.refreshGenres();
   }
 
-  cancel(){
-    this.selGenre = null;
+  newGenre() {
+    this.editMode = false;
+    this.selectedGenre = new Genre();
   }
 
-  remove(id: number){
+  update(genre: Genre) {
+    this.editMode = true;
+    this.selectedGenre = genre;
+  }
+
+  cancel() {
+    this.selectedGenre = null;
+  }
+
+  remove(id: number) {
     this.genreService.remove(id);
     this.refreshGenres();
   }
 
 }
-
-

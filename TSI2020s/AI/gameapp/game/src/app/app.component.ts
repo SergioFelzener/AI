@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'game';
+  logo = 'assets/logo2.png';
+  logoCSS = 'logo';
 }

@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GameComponent } from './views/game/game.component';
 import { GenreComponent } from './views/genre/genre.component';
+import { BookComponent } from './views/book/book.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameComponent,
-    GenreComponent
+    GenreComponent,
+    BookComponent
   ],
   imports: [
     BrowserModule,

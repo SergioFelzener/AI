@@ -1,0 +1,27 @@
+<h2>Meus Livros</h2>
+<ul>
+    <li *ngFor="let book of books" (click)="selectBook(book)">
+        {{book.name}} - {{book.id}}
+        <button class="btn-sm btn-danger" (click)="remove(book.id);">X</button>
+    </li>
+</ul>
+
+<div *ngIf="selBook">
+    <input class="mr-2" type="text" placeholder="Game Name" [(ngModel)]="selBook.name">
+    <input type="text" placeholder="Status" [(ngModel)]="selBook.autor">
+    <br>
+    <!--<select class="form-control" [(ngModel)]="selBook.editora">
+      <option ([ngModel])="(genres)" *ngFor="let genre of genres">
+        {{ genre.name }}</option
+      >
+    </select>-->
+    <input class="mr-2" type="text" placeholder="Genero" [(ngModel)]="selBook.editora">
+    <input class="mr-2" type="text" placeholder="Genero" [(ngModel)]="selBook.edicao">
+    <br>
+    <br>
+    <button class="btn-sm btn-success mr-2" (click)="save();">Save</button>
+    <button class="btn-sm btn-danger" (click)="cancel();">Cancel</button>
+</div>
+<br>
+<button class="btn-sm btn-primary" (click)="newBook();">Novo Livro</button>
+<br>

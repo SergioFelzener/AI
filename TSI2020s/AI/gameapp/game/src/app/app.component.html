@@ -10,9 +10,34 @@
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #337396;">
+            <a class="navbar-brand" href="#"><img [class]="logoCSS" [src]="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a routerLink="/game" routerLinkActive="active" style="color: #ffffff;">Crud Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/genre" routerLinkActive="active" style="color: #ffffff; margin-left: 15px;">Crud Generos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/book" routerLinkActive="active" style="color: #ffffff; margin-left: 15px;">Crud Livros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/genre" routerLinkActive="active" style="color: #ffffff; margin-left: 15px;">Crud Generos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
     <div class="container mt-5" style="align-items: center;">
-        <app-game></app-game>
-        <app-genre></app-genre>
+        <router-outlet></router-outlet>
     </div>
 </body>
 
