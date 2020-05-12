@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { GameComponent } from './views/game/game.component';
 import { GenreComponent } from './views/genre/genre.component';
 import { BookComponent } from './views/book/book.component';
+import { CategoriaComponent } from './views/categoria/categoria.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameComponent,
     GenreComponent,
-    BookComponent
+    BookComponent,
+    CategoriaComponent
   ],
   imports: [
     BrowserModule,

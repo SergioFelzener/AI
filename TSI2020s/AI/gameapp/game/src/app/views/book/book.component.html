@@ -1,22 +1,22 @@
 <h2>Meus Livros</h2>
 <ul>
     <li *ngFor="let book of books" (click)="selectBook(book)">
-        {{book.name}} - {{book.id}}
+        ID:{{book.id}}<br> Nome:{{book.name}}<br>Editora: {{book.editora}}
         <button class="btn-sm btn-danger" (click)="remove(book.id);">X</button>
     </li>
 </ul>
 
 <div *ngIf="selBook">
-    <input class="mr-2" type="text" placeholder="Game Name" [(ngModel)]="selBook.name">
-    <input type="text" placeholder="Status" [(ngModel)]="selBook.autor">
+    <input class="mr-2" type="text" placeholder="Novo Livro" [(ngModel)]="selBook.name">
+    <input type="text" placeholder="Autor" [(ngModel)]="selBook.autor">
     <br>
     <!--<select class="form-control" [(ngModel)]="selBook.editora">
       <option ([ngModel])="(genres)" *ngFor="let genre of genres">
         {{ genre.name }}</option
       >
     </select>-->
-    <input class="mr-2" type="text" placeholder="Genero" [(ngModel)]="selBook.editora">
-    <input class="mr-2" type="text" placeholder="Genero" [(ngModel)]="selBook.edicao">
+    <input class="mr-2" type="text" placeholder="Editora" [(ngModel)]="selBook.editora">
+    <input class="mr-2" type="number" placeholder="Edição" [(ngModel)]="selBook.edicao">
     <br>
     <br>
     <button class="btn-sm btn-success mr-2" (click)="save();">Save</button>

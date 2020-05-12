@@ -1,4 +1,8 @@
 <style>
+    body {
+        margin-bottom: 1200px;
+    }
+    
     .card {
         border-radius: 20px;
         background: white;
@@ -9,7 +13,7 @@
     }
 </style>
 
-<div class="container mb-5">
+<div style="margin-bottom: 500px;" class="container mb-5">
     <h2>Meus Jogos</h2>
     <div *ngIf="selGame ">
         <input class="form-control mr-2 " type="text " placeholder="Game Name " [(ngModel)]="selGame.name ">
