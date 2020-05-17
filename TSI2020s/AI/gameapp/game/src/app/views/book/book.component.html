@@ -1,27 +1,55 @@
-<h2>Meus Livros</h2>
-<ul>
-    <li *ngFor="let book of books" (click)="selectBook(book)">
-        ID:{{book.id}}<br> Nome:{{book.name}}<br>Editora: {{book.editora}}
-        <button class="btn-sm btn-danger" (click)="remove(book.id);">X</button>
-    </li>
-</ul>
+<style>
+    body {
+        margin-bottom: 1200px;
+    }
+    
+    .card {
+        border-radius: 20px;
+        background: white;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+        transition: 0.5s ease;
+        cursor: pointer;
+        margin: 30px;
+    }
+</style>
 
-<div *ngIf="selBook">
-    <input class="mr-2" type="text" placeholder="Novo Livro" [(ngModel)]="selBook.name">
-    <input type="text" placeholder="Autor" [(ngModel)]="selBook.autor">
+<div style="margin-bottom: 500px;" class="container mb-5">
+    <h2>Meus Livros</h2>
+    <div *ngIf="selBook ">
+        <input class="form-control mr-2 " type="text " placeholder="Book Name" [(ngModel)]="selBook.name ">
+        <input class="form-control mt-3" type="text " placeholder="Autor " [(ngModel)]="selBook.autor">
+        <br>
+        <div>
+            <label style="margin-top: 10px; " for="categoria ">Genero:</label>
+            <select id="categoria " style="width: 120px; margin-left: 10px; " class="form-control " [(ngModel)]="selBook.categoria ">
+            <option ([ngModel])="(categorias) " *ngFor="let categoria of categorias ">
+              {{ categoria.name }}</option>
+          </select>
+        </div>
+        <input class="form-control mt-3" type="text " placeholder="Editora" [(ngModel)]="selBook.editora">
+        <input class="form-control" type="text " style="margin-top: 10px; " placeholder="Edição" [(ngModel)]="selBook.edicao">
+        <br>
+        <br>
+        <button class="btn-sm btn-success mr-2 " (click)="save(); ">Save</button>
+        <button class="btn-sm btn-danger " (click)="cancel(); ">Cancel</button>
+    </div>
     <br>
-    <!--<select class="form-control" [(ngModel)]="selBook.editora">
-      <option ([ngModel])="(genres)" *ngFor="let genre of genres">
-        {{ genre.name }}</option
-      >
-    </select>-->
-    <input class="mr-2" type="text" placeholder="Editora" [(ngModel)]="selBook.editora">
-    <input class="mr-2" type="number" placeholder="Edição" [(ngModel)]="selBook.edicao">
+    <button class="btn-sm btn-primary " (click)="newBook(); ">New Book</button>
     <br>
-    <br>
-    <button class="btn-sm btn-success mr-2" (click)="save();">Save</button>
-    <button class="btn-sm btn-danger" (click)="cancel();">Cancel</button>
+
+    <div class="row">
+        <div *ngFor=" let book of books " (click)="selectBook(book)" class='col-md-3' style="padding-top: 1%;">
+            <div class="card " style="width: 100%;">
+                <div class="card-body ">
+                    <h2 class="card-title">{{book.name}}</h2>
+                    <p class="card-text ">Autor : {{book.autor}}</p>
+                    <p class="card-text ">Editora : {{book.editora}}</p>
+                    <p class="card-text ">Edição : {{book.edicao}}</p>
+                    <p class="card-text ">Categoria : {{book.categoria}}</p>
+                    <span class="float-right">deletar<button class="btn-sm btn-danger float-right mb-1 ml-1" (click)="remove(book.id);">X</button></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
-<br>
-<button class="btn-sm btn-primary" (click)="newBook();">Novo Livro</button>
-<br>

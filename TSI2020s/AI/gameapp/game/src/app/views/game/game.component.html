@@ -22,9 +22,9 @@
         <div>
             <label style="margin-top: 10px; " for="categoria ">Genero:</label>
             <select id="categoria " style="width: 120px; margin-left: 10px; " class="form-control " [(ngModel)]="selGame.genre ">
-        <option ([ngModel])="(genres) " *ngFor="let genre of genres ">
-          {{ genre.name }}</option>
-      </select>
+              <option ([ngModel])="(genres) " *ngFor="let genre of genres ">
+                {{ genre.name }}</option>
+            </select>
         </div>
         <input class="form-control" type="text " style="margin-top: 10px; " placeholder="Plataforma " [(ngModel)]="selGame.plataform ">
         <br>

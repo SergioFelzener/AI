@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../../services/book.service';
 import { Book } from '../../model/book';
+import { CategoriaService } from 'src/app/services/categoria.service';
+import { Categoria } from 'src/app/model/book_categoria';
 
 
 
@@ -12,17 +14,23 @@ import { Book } from '../../model/book';
 export class BookComponent implements OnInit {
 
   books = new Array<Book>();
+  categorias: Array<Categoria>;
   selBook: Book = null;
-  editMode =  false;
+  editMode = false;
 
-  constructor(private bookService: BookService) { }
+  constructor(private bookService: BookService, private categoriaService: CategoriaService) { }
 
   ngOnInit(): void {
-    this.refreshBooks();
+    this.refreshGames();
+    this.refreshCategorias();
   }
 
-  refreshBooks(){
+  refreshGames(){
     this.books = this.bookService.list();
+  }
+
+  refreshCategorias(){
+    this.categorias = this.categoriaService.list();
   }
 
   selectBook(book: Book){
@@ -30,33 +38,29 @@ export class BookComponent implements OnInit {
     this.editMode = true;
   }
 
+  newBook(){
+    this.editMode = false;
+    this.selBook = new Book();
+  }
+
   save(){
-    if (this.editMode){
+    if(this.editMode) {
       this.bookService.update(this.selBook);
     }else {
       this.bookService.insert(this.selBook);
     }
     this.cancel();
-    this.refreshBooks();
+    this.refreshGames();
   }
 
   cancel(){
     this.selBook = null;
   }
 
-  newBook() {
-    this.editMode = false;
-    this.selBook = new Book ();
-  }
-
-  update(book: Book){
-    this.editMode = true;
-    this.selBook = book;
-  }
-
   remove(id: number){
     this.bookService.remove(id);
-    this.refreshBooks();
+    this.refreshGames();
   }
 
 }
+
