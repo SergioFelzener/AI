@@ -8,12 +8,14 @@ import { CepComponent } from './views/cep/cep.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProdutoComponent } from './views/produto/produto.component';
+import { TimezoneComponent } from './views/timezone/timezone.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CepComponent,
-    ProdutoComponent
+    ProdutoComponent,
+    TimezoneComponent
   ],
   imports: [
     BrowserModule,

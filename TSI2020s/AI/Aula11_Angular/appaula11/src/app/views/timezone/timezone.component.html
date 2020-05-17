@@ -1,0 +1,14 @@
+<h2>Timezone World</h2>
+
+<div>
+    <select (change)="getTimezone()" [(ngModel)]="selectedTimezone">
+      <option *ngFor="let timezone of timezoneOptions"> {{ timezone }}</option>
+    </select>
+</div><br><br><br>
+
+
+<div *ngIf="timezoneData">
+    <p> TimeZone : {{ data }}</p>
+</div>
+
+<hr>
