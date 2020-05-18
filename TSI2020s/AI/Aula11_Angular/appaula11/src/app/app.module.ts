@@ -9,13 +9,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProdutoComponent } from './views/produto/produto.component';
 import { TimezoneComponent } from './views/timezone/timezone.component';
+import { Covid19Component } from './views/covid19/covid19.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CepComponent,
     ProdutoComponent,
-    TimezoneComponent
+    TimezoneComponent,
+    Covid19Component
   ],
   imports: [
     BrowserModule,

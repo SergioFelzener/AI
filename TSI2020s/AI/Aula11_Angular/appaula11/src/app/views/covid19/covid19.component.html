@@ -1,0 +1,31 @@
+<h2>Covid 19 REST - API</h2>
+
+<button (click)="listarCovidEstadosBrasil()" class="btn-dark">Listar Covid19</button>
+
+<br><br>
+
+
+<div *ngIf="covid19">
+    <table class="table table-striped">
+        <tr>
+            <th>Estado ID</th>
+            <th>UF</th>
+            <th>Estado</th>
+            <th>Casos</th>
+            <th>Mortes</th>
+            <th>Suspeitos</th>
+            <th>Refuses</th>
+            <th>Data</th>
+        </tr>
+        <tr *ngFor="let covid of covid19">
+
+            <!---  <td>{{covid.data[0].uid}}</td>
+            <td>{{covid.data[1].uf}}</td>
+            <td>{{covid.data[2].state}}</td>
+            <td>{{covid.data[3].cases}}</td>
+            <td>{{covid.data[4].death}}</td>
+            <td>{{covid.data[5].suspects}}</td>
+            <td>{{covid.data[6].refuses}}</td>-->
+            <td>{{covid.data}}</td>
+        </tr>
+    </table>
