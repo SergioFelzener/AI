@@ -3,7 +3,7 @@ export class Covid19Statistics {
   uf: string;
   state: string;
   cases: number;
-  death: number;
+  deaths: number;
   suspects: number;
   refuses: number;
   datetime: string;
