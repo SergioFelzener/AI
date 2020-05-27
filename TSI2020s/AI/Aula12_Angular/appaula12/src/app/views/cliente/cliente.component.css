@@ -1,3 +1,24 @@
-.botaoAtualizar {
-    margin-left: 3px;
+.botaoAdd {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+}
+
+.botaoRefresh {
+    float: right;
+    margin-top: -20px;
+}
+
+.formItem {
+    width: 100%;
+}
+
+.areaEdicao {
+    margin-top: 30px;
+}
+
+.botoesEditar {
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
 }

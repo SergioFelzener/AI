@@ -1,7 +1,97 @@
 <mat-card class="page-card">
     <h2>Gerenciamento de Clientes</h2>
 
-    <button mat-raised-button color="primary">Novo</button>
-    <button class="botaoAtualizar" mat-raised-button color="primary">Atualizar</button>
+    <button (click)="novoCliente()" class="botaoAdd" mat-fab color="primary">
+      <mat-icon>add</mat-icon>
+    </button>
+    <button class="botaoRefresh" mat-button color="primary" (click)="listar()">
+      <mat-icon class="botaoRefresh">refresh</mat-icon>
+    </button>
+
+    <div>
+        <mat-table [dataSource]="arrayClientes">
+
+            <ng-container matColumnDef="nome">
+                <mat-header-cell *matHeaderCellDef>
+                    Nome
+                </mat-header-cell>
+                <mat-cell *matCellDef="let cliente">
+                    {{cliente.nome}}
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="cpf">
+                <mat-header-cell *matHeaderCellDef>
+                    CPF
+                </mat-header-cell>
+                <mat-cell *matCellDef="let cliente">
+                    {{cliente.cpf}}
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="acoes">
+                <mat-header-cell *matHeaderCellDef>
+                    Ações
+                </mat-header-cell>
+                <mat-cell *matCellDef="let cliente">
+                    <button (click)="remover(cliente._id)" mat-button color="primary">
+                      <mat-icon>delete</mat-icon>
+                    </button>
+                    <button (click)="selecionar(cliente)" mat-button color="primary">
+                      <mat-icon>edit</mat-icon>
+                    </button>
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="colunas">
+
+            </mat-header-row>
+            <mat-row *matRowDef="let row; columns: colunas"></mat-row>
+
+            <!-- <ng-container matColumnDef="cpf">
+                <mat-header-cell *matHeaderCellDef>
+                    CPF
+                </mat-header-cell>
+                <mat-cell *matCellDef="let cliente">
+                    {{cliente.cpf}}
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="colunas">
+
+            </mat-header-row>
+            <mat-row *matRowDef="let row; columns: colunas"></mat-row>
+
+            <ng-container matColumnDef="acoes">
+                <mat-header-cell *matHeaderCellDef>
+                    Ações
+                </mat-header-cell>
+                <mat-cell *matCellDef="let cliente">
+                    {{cliente.acoes}}
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="colunas">
+
+            </mat-header-row>
+            <mat-row *matRowDef="let row; columns: colunas"></mat-row> -->
+
+        </mat-table>
+    </div>
+
+    <div *ngIf="clienteSelecionado" class="areaEdicao">
+        <h2>Editar Cliente</h2>
+        <mat-form-field class="formItem">
+            <mat-label>Nome</mat-label>
+            <input [(ngModel)]="clienteSelecionado.nome" matInput>
+        </mat-form-field>
+        <mat-form-field class="formItem">
+            <mat-label>CPF</mat-label>
+            <input [(ngModel)]="clienteSelecionado.cpf" matInput>
+        </mat-form-field>
+
+        <button (click)="cancelar()" class="botoesEditar" mat-raised-button color="warn">Cancelar</button>
+        <button class="botoesEditar" mat-raised-button color="primary">Salvar</button>
+    </div>
 
 </mat-card>

@@ -15,6 +15,9 @@ import { SobreComponent } from './views/sobre/sobre.component';
 import { ClienteComponent } from './views/cliente/cliente.component';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,11 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     MatButtonModule,
     MatCardModule,
     HttpClientModule,
+    MatTableModule,
+    MatInputModule,
+    FormsModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

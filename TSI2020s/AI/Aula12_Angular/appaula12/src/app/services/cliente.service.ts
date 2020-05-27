@@ -19,7 +19,9 @@ export class ClienteService {
    }
 
    atualizarCliente(cliente: Cliente): Observable<any>{
-    return this.http.put('https://crudcrud.com/api/659bf66c59f24925bcd54a7e1499f51d/cliente/' + cliente._id, cliente);
+     const id = cliente._id;
+     delete cliente._id;
+    return this.http.put('https://crudcrud.com/api/659bf66c59f24925bcd54a7e1499f51d/cliente/' + id, cliente);
    }
 
    deletarCliente(id: string): Observable<any>{
