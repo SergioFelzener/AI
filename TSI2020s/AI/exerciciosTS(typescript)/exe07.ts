@@ -13,11 +13,6 @@ for (let i = 1; i <= 10; i++) {
 }
 
 
-
-
-
-
-
 //let cont = 0;
 //while (cont <= 10) {
 //    console.log(`Tabuada do  ${num} x ${cont}` + `(${num} * ${cont})`)

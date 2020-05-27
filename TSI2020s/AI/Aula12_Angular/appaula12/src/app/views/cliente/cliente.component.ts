@@ -46,11 +46,13 @@ export class ClienteComponent implements OnInit {
     if (this.inserindo){
       this.clienteService.inserirCliente(this.clienteSelecionado).subscribe(() => {
         alert("Cliente Inserido");
+        this.cancelar();
         this.listar();
       });
     }else {
       this.clienteService.atualizarCliente(this.clienteSelecionado).subscribe(() => {
         alert("Cliente Atualizado");
+        this.cancelar();
         this.listar();
       });
     }

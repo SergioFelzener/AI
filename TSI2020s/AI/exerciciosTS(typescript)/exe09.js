@@ -13,4 +13,4 @@ for (var i = 0; i <= 5; i++) {
         nome = nomeAtleta;
     }
 }
-console.log("nome do atleta " + nome + " e sua altura " + altura + " .");
+console.log("Nome :  " + nome + " Altura : " + altura + " .");

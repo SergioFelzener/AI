@@ -16,5 +16,5 @@ for (let i = 0; i <=5; i++){
     }
 
 }
-console.log (`nome do atleta ${nome} e sua altura ${altura} .`);
+console.log (`Nome :  ${nome} Altura : ${altura} .`);
 
